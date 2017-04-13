@@ -13,6 +13,6 @@ allprojects {
 }
 dependencies {
   debugCompile 'com.facebook.stetho:stetho:[LAST_VERSION]'
-  releaseCompile 'com.github.mypplication:stetho-noop:master'
+  releaseCompile 'com.github.mypplication:stetho-noop:1.1'
 }
 ```

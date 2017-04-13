@@ -1,7 +1,6 @@
 package com.facebook.stetho;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 
 import com.facebook.stetho.dumpapp.DumperPlugin;
 import com.facebook.stetho.inspector.console.RuntimeReplFactory;
@@ -21,34 +20,16 @@ public class Stetho
     {
     }
 
-    /**
-     * Construct a simple initializer helper which allows you to customize stetho behaviour
-     * with additional features, plugins, etc.  See {@link DefaultDumperPluginsBuilder} and
-     * {@link DefaultInspectorModulesBuilder} for more information.
-     * <p/>
-     * For simple use cases, consider {@link #initializeWithDefaults(Context)}.
-     */
     public static InitializerBuilder newInitializerBuilder(Context context)
     {
         return new InitializerBuilder(context);
     }
 
-    /**
-     * Start the listening server.  Most of the heavy lifting initialization is deferred until the
-     * first socket connection is received, allowing this to be safely used for debug builds on
-     * even low-end hardware without noticeably affecting performance.
-     */
     public static void initializeWithDefaults(final Context context)
     {
 
     }
 
-    /**
-     * Start the listening service, providing a custom initializer as per
-     * {@link #newInitializerBuilder}.
-     *
-     * @see #initializeWithDefaults(Context)
-     */
     public static void initialize(final Initializer initializer)
     {
 
@@ -172,7 +153,7 @@ public class Stetho
             return mDelegate.finish();
         }
 
-        @Nullable
+
         private DocumentProviderFactory resolveDocumentProvider()
         {
 

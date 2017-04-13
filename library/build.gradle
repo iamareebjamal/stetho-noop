@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
+apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.mypplication'
 
@@ -18,7 +18,7 @@ android {
 
 dependencies {
 
-    provided 'com.android.support:support-annotations:25.3.1'
+    provided 'com.squareup.okhttp3:okhttp:3.6.0'
 }
 
 // build a jar with source files
@@ -27,20 +27,7 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-task javadoc(type: Javadoc) {
-    failOnError false
-    source = android.sourceSets.main.java.sourceFiles
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    classpath += configurations.compile
-}
-
-// build a jar with javadoc
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
 
 artifacts {
     archives sourcesJar
-    archives javadocJar
 }
