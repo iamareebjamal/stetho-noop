@@ -1,15 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.github.mypplication'
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 1
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         consumerProguardFiles 'proguard-rules.pro'
@@ -17,8 +15,8 @@ android {
 }
 
 dependencies {
-
-    provided 'com.squareup.okhttp3:okhttp:3.6.0'
+    compileOnly 'com.jakewharton.timber:timber:4.7.1'
+    compileOnly 'com.squareup.okhttp3:okhttp:3.12.1'
 }
 
 // build a jar with source files
