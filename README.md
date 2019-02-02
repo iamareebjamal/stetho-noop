@@ -1,7 +1,7 @@
-# Stetho no-op [![](https://jitpack.io/v/mypplication/stetho-noop.svg)](https://jitpack.io/#mypplication/stetho-noop)
+# Stetho no-op
+> Simple no-op version of https://github.com/facebook/stetho
 
-
-Simple no-op version of https://github.com/facebook/stetho 
+[![](https://jitpack.io/v/iamareebjamal/stetho-noop.svg)](https://jitpack.io/#iamareebjamal/stetho-noop)
 
 
 ```groovy
@@ -11,8 +11,9 @@ allprojects {
     maven { url 'https://jitpack.io' }
   }
 }
+
 dependencies {
-  debugCompile 'com.facebook.stetho:stetho:[LAST_VERSION]'
-  releaseCompile 'com.github.mypplication:stetho-noop:1.1'
+  debugImplementation 'com.facebook.stetho:stetho:{LATEST_VERSION}'
+  releaseImplementation 'com.github.iamareebjamal:stetho-noop:{JITPACK_VERSION}'
 }
 ```
